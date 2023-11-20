@@ -48,3 +48,11 @@ create user workbook identified by workbook;
 grant RESOURCE, CONNECT to workbook;
 alter user workbook default TABLESPACE users quota UNLIMITED on users;
 
+
+
+-- DDL 사용자 계정 만들기
+ALTER SESSION set "_oracle_script" = true;
+create user ddl identified by ddl;
+grant RESOURCE, CONNECT to ddl;
+alter user ddl default TABLESPACE users quota UNLIMITED on users;
+
