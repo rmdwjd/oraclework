@@ -43,7 +43,7 @@ NOCYCLE
 NOCACHE;
 
 /*
-    2. TLZNJSTM TKDYD
+    2. 시퀀스 사용 
     
     시퀀스명.CURRVAL : 현재 시퀀스 값(마지막으로 성공한 NEXTVAL의 값)
     시퀀스명.NEXTCAL : 시퀀스 값에 일정값을 증가시켜 발생된 값

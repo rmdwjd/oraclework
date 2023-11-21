@@ -59,3 +59,26 @@ GRANT SELECT ON AIE.EMPLOYEE TO SAMPLE;
 -- 2.2 SMAPLE계정에게 AIE계정의 DEPARTMENT테이블에 INSERT할 수 있는 권한부여
 GRANT INSERT ON AIE.DEPARTMENT TO SAMPLE;
 GRANT SELECT ON AIE.DEPARTMENT TO SAMPLE;
+
+-- 권한 회수
+-- REVOKE 회수할권한 FROM 계정명;
+REVOKE SELECT ON AIE.EMPLOYEE FROM SAMPLE;
+REVOKE INSERT ON AIE.DEPARTMENT FROM SAMPLE;
+REVOKE SELECT ON AIE.DEPARTMENT FROM SAMPLE;
+
+----------------------------------------------------------------------------------------------------
+
+/*
+    <ROLE 롤>
+    - 특정 권한들을 하나의 집합으로 모아놓은 것
+    
+    CONNECT : CREATE, SESSION
+    RESOURCE : CREATE 객체, INSERT, UPDATE
+    DBA : 시스템 및 객체 관리에 대한 모든 권한을 갖고 있는 롤
+*/
+
+
+ALTER SESSION set "_oracle_script" = true;
+create user SAMPLE2 identified by SAMPLE2;
+grant DBA to SAMPLE2;
+alter user SAMPLE2 default TABLESPACE users quota UNLIMITED on users;

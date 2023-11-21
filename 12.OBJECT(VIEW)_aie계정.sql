@@ -327,7 +327,7 @@ AS SELECT *
     FROM EMPLOYEE
     WHERE SALARY >= 3000000;
 
-SELECT * FROM VM_EMP -- 8명 조회
+SELECT * FROM VM_EMP ;-- 8명 조회
 
 -- 200번 사원의 급여를 200만원으로 변경
 UPDATE VM_EMP
